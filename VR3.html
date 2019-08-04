@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<title></title>
+  	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  	<link href="https://fonts.googleapis.com/css?family=Rock Salt" rel="stylesheet" type="text/css">
+  	<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+	  <div class="topnav">
+      <nav>
+        <a href="index.html">Fernando Alarcon</a> 
+        <a href="VRMain.html">Virtual Reality</a> 
+    </nav> 
+    </div>
+    <h1>Life's Initial Test</h1>
+    <img src="LifesInitialTest.png">
+    <iframe class="videos"width="560" height="315" src="https://www.youtube.com/embed/C6J4ZUxvTAk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <p>Built a VR application for the platform of my choosing in Unity. The project made the user feel emotional, either with fear, sadness, or joy! Completed achievements such as using "speech recognition", "compute shaders", "animations", etc. to make users feel emotional.
+
+    Part of the Virtual Reality Nanodegree Program at Udacity's School of Development</p>
+    <h2>Below Is the process I went trough to make my Capstone project.</h2>
+    <h1>Fernando Alarcon's Virtual Reality Capstone Planning Document Page</h1>
+        <img src="https://image.ibb.co/caboM6/htc.jpg" alt="htc" border="0" />
+         <h2>Description:</h2>
+         <p>Since the theme for the capstone is emotion I first taught about all the possible emotions I could work with and which one I taught was the most
+            feasable to make happen. I taught about what I should do in my app where it to be about anger, happiness, sadness, or empathy and how to make it happen.
+            After thinking it over for about a day I came to the realization to choose empathy. I then taught about how to do so. I remembered a VR experience called
+            Abe in which the user does not move at all during the whole experience only listening to a robot who is about to kill you. And I tought about how I could 
+            make my app into more of an experience than the usual game most would expect. With that in mind I went about thinking of a topic whithin empathy I wanted
+            to talk about which was the class systems that we have in place and how all of us have no power over where we initially start. To do so I decided to create
+            a test to decide what the fate of the user should be. I then tought about the way in whuich I could implement this in my app using methods tought by in the 
+            class. 
+         </p>
+         <h2>Pre Production:</h2>
+         <p> Choosing between a right scenery asset was tough. Below are the two assets  that I considered for this project:</p>
+         <p> Ruins Scene</p>
+         <img src="https://image.ibb.co/eqv83m/ruins.png" alt="ruins" border="0" />
+         <p>Forest Scene:</p>
+         <img src="https://image.ibb.co/jMYHw6/nature.png" alt="nature" border="0" />
+         <p>In the end I ended up choosing the Ruins scene for my project as I tought it fit the theme of my app more since the ruins are chaotic just as rondomness is when first getting your initial place in life.</p>
+         <p> I then decided on weather the scene should be in the day or night.</p>
+         <p>Night:</p>
+         <img src="https://image.ibb.co/dWDedm/night.png" alt="night" border="0" />
+         <p>Day:</p>
+         <img src="https://image.ibb.co/j7wAjR/day.png" alt="day" border="0" />
+         <p> In the end I ended up choosing the night scene since it gave my app a more mystical feeling to it.</p>
+         <h2>Implementation</h2>
+         <ul>
+            <li>I implemented sounds throughout the map which are activated as soon as the users left controller
+               is within range. -Doable
+            </li>
+            <li>There are five questions the user must answer. -Doable</li>
+            <li>To answer the questions I dabled on weather making it so when the user picks up an object or 
+               when a user touches an object then destroys it thus signaling the answer the user had chosen both where doable options. In the end I chose to use the later option of touching an object
+               and then destroying it since I tought it would lead to less confusion when picking an answer. -Doable
+            </li>
+            <li>I then though about the perfect setting for this test and went to unity's asset store to buy myself a decent scene. I saw two scenes that looked promising. 
+               One was set in the woods and was more of a natural environment and the other one was ruins in the desert at night. In the end I ended up choosing a 
+               environment that was set in desert ruins at night to give the app a mystical feeling to it.I also tought that it would fit in nicely with my test of deciding
+               onces class as ruins are a chaotic mess and since people do not have the ability to choose their position as it is random thus chaotic it would fit 
+               perfectly to the message I am trying to send to the user with this app. -Doable
+            </li>
+            <li>I then taught about how to layout the map. I looked through the assets included in the Desert Scene I had bought from unity and found that there was a platform
+               asset that would be perfect for the app. -Doable 
+            </li>
+            <li>Then I thought about how to implement the sounds in the app. I thought about it for a while and came up with only one possible solution which I tought would work
+               which was to have empty objects which have colliders placed at the entrance of the platform asset.These empty object colliders would be set to trigger so the 
+               user can interact with them and thus enable the question to be read out to the user via AudioClip attached to empty objects which I tought was Doable. -Doable
+            </li>
+            <li>I then thought about all the questions I will have for the app and how to decide the class the user will receive. I chose to have only one question  determine the 
+               the users fate while the other are there just for filler.In order to do the question I have user touch the square object with the left controller which will
+               trigger all the squares to be destroyed by using the function OnTriggerEnter. -Doable
+            </li>
+            <li>I then had a boolean keep track of the question if all where true then I would make a boolean true in order to receive
+               The users fate. -Doable
+            </li>
+            <li>You do have to do all the questions in order to receive your fate and I also decided to implement points which are being tracked by an int. -Doable</li>
+            <li>The user receives the points earned after finishing all 5 stations by way of AudioClip I stuck to an object close to the end. -Doable</li>
+            <li>Then after this is done I decided to implement a teleportation system. First I was going to use the teleportation system taught in the class but then I decided
+               to use an external library for teleportaion called ViveTeleporter which can be found here https://github.com/Flafla2/Vive-Teleporter. -Doable
+            </li>
+            <li> Then I decided on how to give the user their fate. I decided to create a rude object on Blender in order to meet an achievement which I called the Oracle. -Doable</li>
+            <li>Oracle tells the user their fate after finishing the  questions and getting close to the Oracle by way of an emty object with a collider and a AudioClip inside of 3 empty objects near the Oracle. Each empty object containing
+               A different AudioClip for the users class based on the main question answered by the student. -Doable
+            </li>
+         </ul>
+        <h2>Screenshots:</h2>
+        <p>Here are a few screenshots of my app that I tought would be great to showcase in this project.</p>
+        <p>The start of the experience:</p>
+        <img src="https://image.ibb.co/kgspuR/start.png" alt="start" border="0" />
+        <p>Oracle object I created in using Blender. I know it is very crude but I am a beginner. I will polish my 3D modeling skills in the future.:</p>
+        <img src="https://image.ibb.co/jyyCER/oracle.png" alt="oracle" border="0" />
+        <p>The questions:</p>
+        <img src="https://image.ibb.co/hKM4Tm/questions.png" alt="questions" border="0" />
+        <p>A couple of views of the entire scene:</p>
+        <img src="https://image.ibb.co/kFpr8m/game.png" alt="game" border="0" />
+        <img src="https://image.ibb.co/fj6FZR/random1.png" alt="random1" border="0" />
+        
+         <h2> Scope Reduction:</h2>
+         <h3>Kept:</h3>
+         <ul>
+            <li>Night scene.</li>
+            <li>Touching mechanics to answer question.</li>
+            <li>Points.</li>
+            <li>Oracle 3D object.</li>
+            <li>Sound to give user the question.</li>
+            <li>Colliders used to trigger questions.</li>
+            <li>Teleportaion system from an outside library.</li>
+            <li>Points announced trough audio.</li>
+         </ul>
+         <h3>Decideded to keep out:</h3>
+         <ul>
+            <li>Day Scene.</li>
+           <li>Text canvas so I can give the user the question using text.</li>
+            <li>Throwing mechanics to pick answer.</li>
+            <li>Teleportation system taught in the course.</li>
+            <li>Points being printed to the screen so user can see their score.</li>
+         </ul>
+</body>
+</html>
